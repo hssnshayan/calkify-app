@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple, pure javascript, MVC architecture based and fun calculation app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple, pure javascript, MVC architecture based and fun calculation app"
+    />
     <title>Calkify App</title>
 
-    <link rel="stylesheet" href="src/vendors/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/vendors/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="src/vendors/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
 
-    <script type="module" defer src="src/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script
+      type="module"
+      defer
+      src="src/vendors/bootstrap/js/bootstrap.min.js"
+    ></script>
     <script type="module" defer src="src/js/controller.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="custom-container">
+      <header class="header-style row">
+        <div class="header-title col-12 col-md-6">
+          <h3 class="fw-bold">Calkify App</h3>
+          <span class="fw-bold">A simple javascript calculator</span>
+        </div>
+        <div class="header-btns col-12 col-md-6 d-flex justify-content-end">
+          <button class="btn btn-secondary button-style" id="btn-signin">
+            Signin
+          </button>
+          <button class="btn btn-secondary button-style ms-1" id="btn-signup">
+            Signup
+          </button>
+        </div>
+      </header>
+      <section class="main-style">
+        <div>
+          <ul class="slider-container">
+            <li class="slider-element">
+              <img
+                src="src/img/img-01.jpg"
+                alt="Calkify app"
+                class="slider-img"
+              />
+            </li>
+            <li class="slider-element">
+              <img
+                src="src/img/img-05.jpg"
+                alt="Calkify app"
+                class="slider-img"
+              />
+            </li>
+            <li class="slider-element">
+              <img
+                src="src/img/img-06.jpg"
+                alt="Calkify app"
+                class="slider-img"
+              />
+            </li>
+          </ul>
+          <span class="d-flex justify-content-start">
+            <em
+              >Images credit:<a
+                href="https://www.freepik.com/"
+                class="text-black"
+                >&nbsp;Freepik.com</a
+              ></em
+            >
+          </span>
+        </div>
+      </section>
+      <footer class="footer-style row">
+        <div class="col-12 col-md-6">
+          <i class="fa fa-calculator fa-1x"></i><b>&nbsp;CALKIFY App</b><br />
+          Do simple and complex calculations
+        </div>
+        <div class="col-12 col-md-6 text-end">
+          Developed with <i class="fa fa-heart text-danger"></i> by
+          <a href="https://github.com/hssnshayan" class="text-black fw-bold"
+            >Hossein Shayan</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
