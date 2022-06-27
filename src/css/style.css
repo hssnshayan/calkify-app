@@ -63,7 +63,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 .slider-element {
   display: block;
@@ -87,8 +87,8 @@ body {
 }
 
 #slider-next {
-  right: 125px;
+  left: 71%;
 }
 #slider-prev {
-  left: 125px;
+  left: 25%;
 }
