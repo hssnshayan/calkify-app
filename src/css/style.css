@@ -19,8 +19,8 @@ body {
   border-radius: 0.5rem;
   margin: 1rem 0rem 0.5rem;
   background-image: linear-gradient(to right, #8ada87, #4ed36a, #6fce84);
-  
-  box-shadow: 3px 5px 14px 1px #a3a3a3b0;;
+
+  box-shadow: 3px 5px 14px 1px #a3a3a3b0;
 }
 
 .main-style {
@@ -28,7 +28,7 @@ body {
   border-radius: 0.5rem;
   margin: 0rem;
   background-image: linear-gradient(to right, #8ada87, #4ed36a, #6fce84);
-  box-shadow: 3px 5px 14px 1px #a3a3a3b0;;
+  box-shadow: 3px 5px 14px 1px #a3a3a3b0;
 }
 
 .footer-style {
@@ -55,19 +55,40 @@ body {
 }
 
 .slider-img {
-  width: 100%;
   height: 500px;
 }
 
-.slider-container{
-  display: flex; 
-  margin: 0; 
-  padding: 0; 
+.slider-container {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
   overflow: visible;
 }
-.slider-element{
-  display: block; 
+.slider-element {
+  display: block;
   list-style: none;
   width: 100%;
   transition: transform 2s ease;
+}
+
+.slider-btn {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  margin-top: 225px;
+}
+
+#slider-next {
+  right: 125px;
+}
+#slider-prev {
+  left: 125px;
 }

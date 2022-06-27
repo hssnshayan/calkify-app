@@ -8,24 +8,24 @@ const init = function () {
 };
 init();
 
-const btnLogin = document.querySelector("#btn-signin");
-const btnLogout = document.querySelector("#btn-signup");
+const sliderBtns = document.querySelector("#slider-btns");
+const sliderElements = document.querySelectorAll(".slider-element");
 
-const sliderElements = document.querySelectorAll('.slider-element')
-const sliderImages = document.querySelectorAll('.slider-img')
+const sliderChange = function (counter, sliders, offset) {
+  const numOfSliders = sliders.length;
 
-// sliderImages.forEach((element, i)=>{
-//   element.style.width = `${sliderElements.length * 100}%`;
-//   sliderElements[i].style.transform = `translateX(+${i * 240 * 2}px)`;
-// })
+  if (counter >= numOfSliders && offset < 0) counter = 0;
+  if (counter === 0 && offset > 0) counter = numOfSliders - 1;
 
-// btnLogin.addEventListener("click", () => {
-//   sliderElements.forEach((element, index)=>{
-//     console.log(element)
-//     element.style.transform = `translateX(-${index * 240}px)`;
-//   })
-// });
+  sliders.forEach((element) => {
+    element.style.transform = `translateX(${counter * offset}px)`;
+  });
+};
 
-btnLogout.addEventListener("click", () => {
-  // img3.scrollIntoView({ behavior: "smooth" });
+sliderBtns.addEventListener("click", (e) => {
+  let offset;
+  if (e.target.classList.contains("btn-prev")) offset = +720;
+  else if (e.target.classList.contains("btn-next")) offset = -720;
+  else return;
+  sliderChange(0, sliderElements, offset)
 });
