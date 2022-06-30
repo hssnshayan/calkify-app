@@ -25,7 +25,103 @@
     <script type="module" defer src="src/js/controller.js"></script>
   </head>
   <body>
+    <!-- Start of signup form -->
+    <div class="signup-popup d-none">
+      <form id="signup-form">
+        <div><h4 class="fw-bold">SignUp</h4></div>
+        <div class="form-group">
+          <label>Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="user-signup"
+            placeholder="Enter your username"
+          />
+          <small class="form-text text-muted"
+            >Usernames are all converted to lowercase and must be at least 5
+            characters.</small
+          >
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password1-signup"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password2-signup"
+            placeholder="Enter your password again"
+          />
+        </div>
+        <span class="my-2 text-danger fw-bold d-none" id="signup-message"
+          ><i class="fa fa-exclamation-circle text-black"></i>&nbsp;Please check
+          inputs then try again...</span
+        >
+        <button
+          type="submit"
+          class="mt-2 btn btn-primary"
+          id="btn-signup-submit"
+        >
+          Signup
+        </button>
+        <button type="button" class="mt-2 btn btn-primary btn-form-cancel">
+          Cancel
+        </button>
+      </form>
+    </div>
+    <!-- End of signup form -->
+    <!-- Start of signin form -->
+    <div class="signin-popup d-none">
+      <form id="signin-form">
+        <div><h4 class="fw-bold">SignIn</h4></div>
+        <div class="form-group">
+          <label>Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="user-signin"
+            placeholder="Enter your username"
+          />
+          <small class="form-text text-muted"
+            >If you have no account yet enter username: demo and password:
+            demo.</small
+          >
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password-signin"
+            placeholder="Enter your password"
+          />
+        </div>
+        <span class="my-2 text-danger fw-bold d-none" id="signin-message"
+          ><i class="fa fa-exclamation-circle text-black"></i>&nbsp;Please check
+          username and password then try again...</span
+        >
+        <button
+          type="submit"
+          class="mt-2 btn btn-primary"
+          id="btn-signin-submit"
+        >
+          Signin
+        </button>
+        <button type="button" class="mt-2 btn btn-primary btn-form-cancel">
+          Cancel
+        </button>
+      </form>
+    </div>
+    <!-- End of signin form -->
     <div class="custom-container">
+      <!-- Start of header -->
       <header class="header-style row">
         <div class="header-title col-12 col-md-6">
           <h3 class="fw-bold">Calkify App</h3>
@@ -39,8 +135,22 @@
             Signup
           </button>
         </div>
+        <div
+          class="header-welcome col-12 col-md-6 d-flex justify-content-end d-none"
+        >
+          <span
+            >Welcome&nbsp;<span class="username-loggedin fw-bold">USER</span
+            >&nbsp;[<u
+              ><span class="logged-out text-primary" role="button"
+                >Logout</span
+              ></u
+            >]</span
+          >
+        </div>
       </header>
-      <section class="main-style">
+      <!-- End of Header -->
+      <!-- Start of main slider -->
+      <section class="main-slider">
         <div>
           <div id="slider-btns" class="">
             <div class="slider-btn btn-next" id="slider-next">
@@ -98,6 +208,11 @@
           </span>
         </div>
       </section>
+      <!-- End of main slider -->
+      <!-- Start of main calculator page -->
+      <section class="main-calculator d-none">CALCULATOR PAGE</section>
+      <!-- End of main calculator page -->
+      <!-- Start of footer -->
       <footer class="footer-style row">
         <div class="col-12 col-md-6">
           <i class="fa fa-calculator fa-1x"></i><b>&nbsp;CALKIFY App</b><br />
@@ -110,6 +225,7 @@
           >
         </div>
       </footer>
+      <!-- End of footer -->
     </div>
   </body>
 </html>

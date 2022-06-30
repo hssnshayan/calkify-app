@@ -31,11 +31,22 @@ const autoSlider = function (slides, numOfSlides) {
   }, SLIDER_DELAY * 1000);
 };
 
+const getAccounts = function () {
+  return model.state.accounts;
+};
+
+const updateAccounts = function (account) {
+  model.state.accounts.push(account);
+};
+
 const init = function () {
-  mainView.removeAfterClickEffect();
+  mainView.removeBtnClicDefaultHandler();
   mainView.addBtnSliserHandler(nextSlide, prevSlide);
   mainView.addKeySliserHandler(nextSlide, prevSlide);
   mainView.autoSliderHandler(autoSlider);
+  mainView.accountHandler();
+  mainView.signinSubmitHandler(getAccounts);
+  mainView.signupSubmitHandler(updateAccounts);
 };
 
 init();
